@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#3A2F26"/><stop offset=".6" stop-color="#1E1813"/><stop offset="1" stop-color="#0F0C0A"/></radialGradient>
+<linearGradient id="gL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DE9A"/><stop offset=".55" stop-color="#D9A94A"/><stop offset="1" stop-color="#8A5A1E"/></linearGradient>
+<linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9923A"/><stop offset=".6" stop-color="#9A6524"/><stop offset="1" stop-color="#5A3510"/></linearGradient>
+<radialGradient id="glow" cx="50%" cy="52%" r="45%"><stop offset="0" stop-color="#FF9A3A" stop-opacity=".28"/><stop offset="1" stop-color="#FF9A3A" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+<circle cx="256" cy="256" r="236" fill="none" stroke="#6B4E2E" stroke-width="6" opacity=".7"/>
+<circle cx="256" cy="256" r="220" fill="none" stroke="#C9A06A" stroke-width="2" opacity=".35" stroke-dasharray="2 14"/>
+<circle cx="256" cy="262" r="210" fill="url(#glow)"/>
+<!-- shadow -->
+<path d="M92 104 H222 L206 132 L262 330 L318 132 L298 104 H420 L392 132 L280 428 H236 L120 132 Z" fill="#000" opacity=".45" transform="translate(6 10)"/>
+<!-- left (lit) half -->
+<path d="M92 104 H222 L206 132 L262 330 L258 428 H236 L120 132 Z" fill="url(#gL)"/>
+<!-- right (shaded) half -->
+<path d="M298 104 H420 L392 132 L280 428 H258 L262 330 L318 132 Z" fill="url(#gR)"/>
+<!-- bevel inner lines -->
+<path d="M120 132 L236 428 M206 132 L262 330 L318 132 M392 132 L280 428" fill="none" stroke="#3A2410" stroke-width="5" stroke-linejoin="round" opacity=".55"/>
+<path d="M92 104 H222 M298 104 H420" stroke="#FFF2C8" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+<path d="M92 104 H222 L206 132 L262 330 L318 132 L298 104 H420 L392 132 L280 428 H236 L120 132 Z" fill="none" stroke="#1C1612" stroke-width="8" stroke-linejoin="miter"/>
+<!-- rune notches -->
+<path d="M150 186 l24 -10 M168 232 l24 -10 M350 186 l-24 -10 M332 232 l-24 -10" stroke="#3A2410" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+<!-- small diamond keystone -->
+<path d="M256 452 l14 14 -14 14 -14 -14z" fill="#C9A06A" stroke="#1C1612" stroke-width="4"/>
+<path d="M256 40 l10 10 -10 10 -10 -10z" fill="#C9A06A" opacity=".75"/>
+</svg>

@@ -1,0 +1,65 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 21 }
+      - uses: android-actions/setup-android@v3
+
+      - name: Build the web app and copy it into Android
+        run: |
+          npm ci
+          npm run build:web
+          npx cap sync android
+
+      # Official builds use the signing key stored in the repo's secrets, so updates install over
+      # older versions. Forks and pull requests have no secrets and fall back to a debug key.
+      - name: Restore signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        if: env.KEYSTORE_BASE64 != ''
+        run: |
+          mkdir -p keystore
+          echo "$KEYSTORE_BASE64" | base64 -d > keystore/release.jks
+          printf 'storeFile=../../keystore/release.jks\nstorePassword=%s\nkeyAlias=fieldguide\nkeyPassword=%s\n' "$KEYSTORE_PASSWORD" "$KEYSTORE_PASSWORD" > keystore/signing.properties
+
+      - name: Build APK
+        working-directory: android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk ../ValheimFieldGuide.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ValheimFieldGuide-apk
+          path: ValheimFieldGuide.apk
+
+      - name: Publish to the "latest" release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest build (${{ github.run_number }})
+          body: |
+            Android: download **ValheimFieldGuide.apk** below on your phone and open it to install or update.
+            Prefer the browser? Use the web version linked in the README.
+          files: ValheimFieldGuide.apk
+          make_latest: true

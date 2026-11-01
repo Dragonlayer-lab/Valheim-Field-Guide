@@ -1,0 +1,8 @@
+name: Idea or feature request
+description: Something that would make the guide more useful
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes: { label: Your idea, description: "What would you like, and when would you use it?" }
+    validations: { required: true }

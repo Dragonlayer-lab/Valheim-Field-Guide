@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Valheim Field Guide</string>
+    <string name="title_activity_main">Valheim Field Guide</string>
+    <string name="package_name">app.fieldguide.valheim</string>
+    <string name="custom_url_scheme">app.fieldguide.valheim</string>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "appId": "app.fieldguide.valheim",
+  "appName": "Valheim Field Guide",
+  "webDir": "www",
+  "android": { "backgroundColor": "#1E1813" },
+  "plugins": { "StatusBar": { "backgroundColor": "#1E1813", "style": "DARK", "overlaysWebView": false } }
+}

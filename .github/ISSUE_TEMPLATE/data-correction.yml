@@ -1,0 +1,16 @@
+name: Wrong or missing game data
+description: A number, recipe, drop or item that doesn't match the game
+labels: [data]
+body:
+  - type: input
+    id: item
+    attributes: { label: Item, creature or page, placeholder: "e.g. Frostner, Fader, Feast recipes" }
+    validations: { required: true }
+  - type: textarea
+    id: wrong
+    attributes: { label: What the guide says }
+    validations: { required: true }
+  - type: textarea
+    id: right
+    attributes: { label: What it should say, description: "Where you saw it: in game (version), wiki page, patch notes…" }
+    validations: { required: true }
