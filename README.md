@@ -4,8 +4,8 @@
 
 The Field Guide is a pocket-sized lorebook for **Valheim 1.0** that works anywhere, even far from
 the nearest signal tower (it runs fully offline). Every weapon, armor set, creature, material, food,
-recipe, station, merchant ware, trinket and gem is in here, with stats at every upgrade quality, all
-the way to Q25 at the Forge of Potential. Check it between portal hops, plan your next boss run by
+recipe, station, merchant ware, trinket and gem is in here, with stats at every upgrade level, all
+the way to level 25 at the Forge of Potential. Check it between portal hops, plan your next boss run by
 the fire, and stop alt-tabbing out of the fight.
 
 **[Use it in your browser](https://dragonlayer-lab.github.io/Valheim-Field-Guide/)** ·
@@ -24,8 +24,8 @@ the fire, and stop alt-tabbing out of the fight.
 - **Pick your biome** on the home screen and everything follows it: boss, mini-boss, the
   strongest creature, materials, and the weather and wind forecast (it uses the game's own seeded
   forecast, so it matches every world).
-- **Weapons and armor** with damage, block, armor and durability at Q1–Q5, then every 5 levels up
-  to Q25, plus craft and upgrade costs for each level.
+- **Weapons and armor** with damage, block, armor and durability at every upgrade level, from your
+  first craft up to level 25, plus craft and upgrade costs for each level.
 - **Creatures** with health, weaknesses, drops and star levels. **Materials** with where to find
   them and what they make.
 - **Food, meads, recipes, crafting stations, merchants, trinkets and gems**, all searchable, filterable
