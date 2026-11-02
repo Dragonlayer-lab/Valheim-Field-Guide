@@ -4,7 +4,7 @@ A fast, offline Valheim reference for your phone: every weapon, armor set, creat
 food, recipe, station, merchant item, trinket and gem in **Valheim 1.0**, with stats at any
 upgrade quality, up to Q25 at the Forge of Potential.
 
-**[Use it in your browser](https://OWNER.github.io/REPO/)** ·
+**[Use it in your browser](https://dragonlayer-lab.github.io/Valheim-Field-Guide/)** ·
 **[Download the Android app (APK)](../../releases/latest)** ·
 **[Report a problem or suggest something](../../issues/new/choose)**
 
