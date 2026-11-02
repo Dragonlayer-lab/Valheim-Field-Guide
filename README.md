@@ -1,8 +1,12 @@
 # Valheim Field Guide
 
-A fast, offline Valheim reference for your phone: every weapon, armor set, creature, material,
-food, recipe, station, merchant item, trinket and gem in **Valheim 1.0**, with stats at any
-upgrade quality, up to Q25 at the Forge of Potential.
+*Hail, warrior!* Odin didn't send you to the tenth world with a manual, so here's one.
+
+The Field Guide is a pocket-sized lorebook for **Valheim 1.0** that works anywhere, even far from
+the nearest signal tower (it runs fully offline). Every weapon, armor set, creature, material, food,
+recipe, station, merchant ware, trinket and gem is in here, with stats at every upgrade quality, all
+the way to Q25 at the Forge of Potential. Check it between portal hops, plan your next boss run by
+the fire, and stop alt-tabbing out of the fight.
 
 **[Use it in your browser](https://dragonlayer-lab.github.io/Valheim-Field-Guide/)** ·
 **[Download the Android app (APK)](../../releases/latest)** ·
@@ -15,7 +19,7 @@ upgrade quality, up to Q25 at the Forge of Potential.
   <img src="docs/screenshots/achievements.png" width="200" alt="Achievement and trophy tracker">
 </p>
 
-## What's in it
+## What's in the chest
 
 - **Pick your biome** on the home screen and everything follows it: boss, mini-boss, the
   strongest creature, materials, and the weather and wind forecast (it uses the game's own seeded
@@ -31,21 +35,25 @@ upgrade quality, up to Q25 at the Forge of Potential.
 - **Damage calculator**, **achievement and trophy tracker**, and **console commands** with
   tap-to-copy.
 
-No account, no ads, no tracking. Everything you save stays on your device. Use **Copy backup** at
+No account, no ads, no tracking. What you save stays on your device, as safe as a chest
+behind three stone walls. Use **Copy backup** at
 the bottom of any page to move it to another device.
 
-## Installing the Android app
+## Getting it on your Android phone
 
 1. On your phone, open the [latest release](../../releases/latest) and download
    `ValheimFieldGuide.apk`.
 2. Open it. The first time, Android asks you to allow installs from your browser or Files app.
 3. Tap **Install**. New versions install over the old one and keep your saved data.
 
-## Feedback
+## Feedback: gather round the longhouse fire
 
-This is a fan project and it gets better with your help. If a number is wrong, something's missing,
-or you have an idea, please [open an issue](../../issues/new/choose). There are quick forms for
-data corrections, bugs and ideas.
+This is a fan project made by one Viking with a hammer and too many skill points in Crafting, and it
+gets better with every warrior who weighs in. Spotted a wrong number, a missing drop, or have an idea
+worth a mead? [Open an issue](../../issues/new/choose). There are quick forms for data corrections,
+bugs and ideas, and every one gets read.
+
+Skål! 🍺
 
 ## Building it yourself
 
