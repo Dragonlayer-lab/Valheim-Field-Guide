@@ -62,8 +62,11 @@ jobs:
           name: ValheimFieldGuide-apk
           path: ValheimFieldGuide.apk
 
+      # Only builds signed with the real key are published, so every release installs over the last one.
       - name: Publish to the "latest" release
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          HAS_KEY: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.HAS_KEY == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
